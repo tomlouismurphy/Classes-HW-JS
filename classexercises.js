@@ -43,3 +43,46 @@ class Cat extends Pet {
 }
 
 const kitty = new Cat('Sprinkles', 200);
+
+class Person {
+	constructor(name){
+		this.name = name;
+		this.age = 0;
+		this.weight = 0;
+		this.mood = 0;
+		this.pets = [];
+		this.bankAccount = 0;
+	}
+	getName(){
+		return this.name;
+	}
+	getAge(){
+		return this.age;
+	}
+	getWeight(){
+		return this.weight;
+	}
+	greet(other_person){
+		console.log('Hi ' + other_person);
+	}
+	eat(){
+		this.weight += 1;
+		this.mood += 1;
+	}
+	exercise(){
+		this.weight -= 1;
+	}
+	growOld(){
+		this.age += 1;
+		this.weight += 5;
+		this.mood -= 5;
+		this.bankAccount += 10;
+	}
+	buyPet(pet){
+		this.pets.push(pet);
+		this.mood += 10;
+		this.bankAccount -= pet.price;
+	}
+}
+
+const lady = new Person('Jill');
