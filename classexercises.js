@@ -25,3 +25,21 @@ class Dog extends Pet {
 }
 
 const doggy = new Dog('Sparky', 250);
+
+class Cat extends Pet {
+		constructor(name, price){
+		super(name);
+		this.price = price;
+	}
+	purr(){
+		console.log('purrrrr');
+	}
+	clean(){
+		console.log('cleaning');
+	}
+	getPrice(){
+		return this.price;
+	}
+}
+
+const kitty = new Cat('Sprinkles', 200);
